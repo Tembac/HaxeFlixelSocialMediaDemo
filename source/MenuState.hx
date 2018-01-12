@@ -5,7 +5,6 @@ import flixel.FlxSprite;
 import flixel.FlxState;
 import flixel.text.FlxText;
 import flixel.ui.FlxButton;
-import flixel.util.FlxMath;
 
 /**
  * A FlxState which can be used for the game's menu.
@@ -42,9 +41,9 @@ class MenuState extends FlxState
 	/**
 	 * Function that is called once every frame.
 	 */
-	override public function update():Void
+	override public function update(e:Float):Void
 	{
-		super.update();
+		super.update(e);
 		
 		//previene que el pájaro accione si se cliquea en el globo
 		if (FlxG.mouse.justReleased)
